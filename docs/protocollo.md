@@ -1,4 +1,4 @@
-### Il seguente protocollo fornisce indicazioni pratiche per la somministrazione orale di zuccheri semplici in un bambino di 9 anni con ipoglicemia chetonemica, con l'obiettivo di evitare la terapia endovenosa.
+# Il seguente protocollo fornisce indicazioni pratiche per la somministrazione orale di zuccheri semplici in un bambino di 9 anni con ipoglicemia chetonemica, con l'obiettivo di evitare la terapia endovenosa.
 
 Il seguente protocollo fornisce indicazioni pratiche per la somministrazione orale di zuccheri semplici in un bambino di 9 anni con ipoglicemia chetonemica, con l'obiettivo di evitare la terapia endovenosa.[[1\]](https://pubmed.ncbi.nlm.nih.gov/38894740)[[2\]](https://pubmed.ncbi.nlm.nih.gov/26718813)
 

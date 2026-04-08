@@ -1,0 +1,278 @@
+/* ──────────────────────────────────────────────────────────
+   Segnale & Rumore — Casi · stylesheet per i documenti
+   coordinato con index.html
+   ────────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root{
+  --ink:#1a1410;
+  --ink-soft:#3d332b;
+  --paper:#f4ede0;
+  --paper-warm:#ebe0cc;
+  --accent:#b4361a;
+  --accent-soft:#d97757;
+  --muted:#8a7a66;
+}
+
+*{box-sizing:border-box}
+
+html,body{
+  margin:0;padding:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Fraunces",Georgia,serif;
+  font-optical-sizing:auto;
+  font-variation-settings:"SOFT" 30;
+  -webkit-font-smoothing:antialiased;
+}
+
+body{
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(217,119,87,0.08), transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(180,54,26,0.06), transparent 50%);
+  position:relative;
+}
+
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:100;
+  opacity:0.35;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.35 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+/* layout */
+main{
+  max-width:720px;
+  margin:0 auto;
+  padding:clamp(1.5rem,4vw,4rem) clamp(1.25rem,4vw,2.5rem);
+  position:relative;
+  z-index:1;
+}
+
+/* nav to home */
+.home-link{
+  display:inline-block;
+  font-family:"JetBrains Mono",monospace;
+  font-size:0.7rem;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  color:var(--muted);
+  text-decoration:none;
+  border-bottom:1px solid var(--muted);
+  padding-bottom:0.2rem;
+  margin-bottom:2.5rem;
+  transition:all 0.15s;
+}
+.home-link:hover{color:var(--accent);border-color:var(--accent)}
+.home-link::before{content:"← ";font-family:"Fraunces",serif}
+
+/* headings */
+h1{
+  font-family:"Fraunces",serif;
+  font-variation-settings:"SOFT" 100,"WONK" 1;
+  font-weight:300;
+  font-size:clamp(1.9rem,5vw,3.2rem);
+  line-height:1.05;
+  letter-spacing:-0.02em;
+  margin:0 0 2rem;
+  font-style:italic;
+  padding-bottom:1.2rem;
+  border-bottom:6px double var(--ink);
+}
+h1 strong,h1 em{color:var(--accent);font-weight:600;font-style:normal}
+
+h2{
+  font-family:"Fraunces",serif;
+  font-weight:600;
+  font-size:clamp(1.35rem,3vw,1.8rem);
+  line-height:1.15;
+  letter-spacing:-0.01em;
+  margin:3rem 0 1rem;
+  padding-top:1rem;
+  border-top:1px solid var(--ink);
+}
+
+h3{
+  font-family:"Fraunces",serif;
+  font-weight:600;
+  font-size:1.2rem;
+  margin:2rem 0 0.7rem;
+  font-style:italic;
+  color:var(--ink-soft);
+}
+
+h4{
+  font-family:"JetBrains Mono",monospace;
+  font-size:0.75rem;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  color:var(--accent);
+  margin:1.5rem 0 0.5rem;
+  font-weight:600;
+}
+
+/* prose */
+p{
+  font-size:1.08rem;
+  line-height:1.65;
+  margin:0 0 1.1rem;
+  hyphens:auto;
+}
+
+p:first-of-type::first-letter{
+  font-family:"Fraunces",serif;
+  font-weight:800;
+  font-size:4.2rem;
+  float:left;
+  line-height:0.85;
+  padding:0.35rem 0.55rem 0 0;
+  color:var(--accent);
+  font-style:normal;
+}
+
+strong{color:var(--ink);font-weight:600}
+em{color:var(--ink-soft)}
+
+a{
+  color:var(--accent);
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+}
+a:hover{
+  background:var(--accent);
+  color:var(--paper);
+  text-decoration:none;
+}
+
+/* lists */
+ul,ol{
+  padding-left:1.4rem;
+  margin:1rem 0 1.4rem;
+}
+li{
+  font-size:1.05rem;
+  line-height:1.6;
+  margin-bottom:0.5rem;
+  padding-left:0.3rem;
+}
+ul li::marker{color:var(--accent)}
+ol li::marker{color:var(--accent);font-family:"JetBrains Mono",monospace;font-size:0.85rem;font-weight:600}
+
+/* blockquote */
+blockquote{
+  font-family:"Fraunces",serif;
+  font-style:italic;
+  font-weight:300;
+  font-size:1.25rem;
+  line-height:1.4;
+  color:var(--ink-soft);
+  margin:2rem 0;
+  padding:0.5rem 0 0.5rem 1.5rem;
+  border-left:4px solid var(--accent);
+}
+
+/* code (inline) */
+code{
+  font-family:"JetBrains Mono",monospace;
+  font-size:0.88em;
+  background:var(--paper-warm);
+  padding:0.1rem 0.35rem;
+  border-radius:3px;
+  color:var(--ink);
+}
+
+/* pre blocks */
+pre{
+  background:var(--paper-warm);
+  border:1px solid var(--muted);
+  border-left:4px solid var(--accent);
+  padding:1rem 1.2rem;
+  overflow-x:auto;
+  font-size:0.85rem;
+  line-height:1.5;
+  margin:1.5rem 0;
+}
+pre code{background:none;padding:0}
+
+/* images */
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+  margin:2rem auto;
+  border:1px solid var(--muted);
+  background:var(--paper-warm);
+  padding:0.5rem;
+}
+
+/* horizontal rule */
+hr{
+  border:none;
+  height:1px;
+  background:var(--ink);
+  margin:3rem auto;
+  width:40%;
+  position:relative;
+}
+hr::after{
+  content:"§";
+  position:absolute;
+  top:-0.8rem;
+  left:50%;
+  transform:translateX(-50%);
+  background:var(--paper);
+  padding:0 0.8rem;
+  font-family:"Fraunces",serif;
+  color:var(--accent);
+  font-size:1.2rem;
+}
+
+/* tables */
+table{
+  border-collapse:collapse;
+  width:100%;
+  margin:1.5rem 0;
+  font-size:0.95rem;
+}
+th,td{
+  padding:0.6rem 0.8rem;
+  text-align:left;
+  border-bottom:1px solid var(--muted);
+}
+th{
+  font-family:"JetBrains Mono",monospace;
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  color:var(--accent);
+  border-bottom:2px solid var(--ink);
+}
+
+/* references section — Pandoc wraps footnotes/references in specific divs */
+.references,#refs{
+  margin-top:3rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--ink);
+  font-size:0.92rem;
+}
+.references p,#refs p{font-size:0.92rem;line-height:1.55}
+
+/* footer */
+.colophon{
+  margin-top:5rem;
+  padding-top:2rem;
+  border-top:6px double var(--ink);
+  font-family:"JetBrains Mono",monospace;
+  font-size:0.7rem;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  color:var(--muted);
+  line-height:1.8;
+  text-align:center;
+}
+
+@media (max-width:520px){
+  p:first-of-type::first-letter{font-size:3.4rem}
+  blockquote{font-size:1.1rem;padding-left:1.2rem}
+}

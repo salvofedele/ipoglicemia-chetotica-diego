@@ -1,4 +1,4 @@
-### Il Vomito nella Chetosi: Il Prezzo da Pagare per Proteggere il Cervello
+# Il Vomito nella Chetosi: Il Prezzo da Pagare per Proteggere il Cervello
 
 **IL VOMITO NELLA CHETOSI: IL PREZZO DA PAGARE PER PROTEGGERE IL CERVELLO**
 
