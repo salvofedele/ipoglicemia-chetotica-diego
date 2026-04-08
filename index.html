@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Una notte di ipoglicemia chetonemica — Il racconto di Diego</title>
+<meta name="description" content="Racconto cronologico di una gestione familiare di ipoglicemia chetonemica pediatrica, con documenti divulgativi e bibliografia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1a1410;
+    --ink-soft:#3d332b;
+    --paper:#f4ede0;
+    --paper-warm:#ebe0cc;
+    --rule:#1a1410;
+    --accent:#b4361a;
+    --accent-soft:#d97757;
+    --muted:#8a7a66;
+    --chat-me:#dcf0d6;
+    --chat-other:#ffffff;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:"Fraunces",Georgia,serif;font-optical-sizing:auto;font-variation-settings:"SOFT" 30}
+  body{
+    background-image:
+      radial-gradient(ellipse at 20% 10%, rgba(217,119,87,0.08), transparent 50%),
+      radial-gradient(ellipse at 80% 80%, rgba(180,54,26,0.06), transparent 50%);
+  }
+  .grain::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:0.35;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.35 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  .wrap{max-width:780px;margin:0 auto;padding:clamp(1.5rem,4vw,4rem) clamp(1.25rem,4vw,2.5rem)}
+
+  /* masthead */
+  header.mast{border-top:6px double var(--ink);border-bottom:1px solid var(--ink);padding:1.4rem 0 1rem;margin-bottom:3rem;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;font-family:"JetBrains Mono",monospace;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em}
+  header.mast .vol{color:var(--muted)}
+  header.mast .date{color:var(--muted)}
+
+  h1.title{
+    font-family:"Fraunces",serif;
+    font-variation-settings:"SOFT" 100,"WONK" 1;
+    font-weight:300;
+    font-size:clamp(2.4rem,6.5vw,4.6rem);
+    line-height:0.95;
+    letter-spacing:-0.02em;
+    margin:0 0 1.2rem;
+    font-style:italic;
+  }
+  h1.title em{font-style:normal;font-weight:800;color:var(--accent);display:block}
+  .deck{font-size:1.18rem;line-height:1.5;color:var(--ink-soft);max-width:58ch;margin:0 0 2.5rem;font-weight:400}
+  .byline{font-family:"JetBrains Mono",monospace;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--muted);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:0.75rem 0;margin-bottom:3rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem}
+
+  h2{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(1.6rem,3.5vw,2.3rem);line-height:1.1;letter-spacing:-0.01em;margin:4rem 0 1.2rem;position:relative;padding-top:1.2rem;border-top:1px solid var(--ink)}
+  h2 .num{font-family:"JetBrains Mono",monospace;font-size:0.7rem;color:var(--accent);display:block;letter-spacing:0.15em;margin-bottom:0.5rem;font-weight:400}
+  h3{font-family:"Fraunces",serif;font-weight:600;font-size:1.25rem;margin:2rem 0 0.7rem;font-style:italic}
+
+  p{font-size:1.08rem;line-height:1.65;margin:0 0 1.1rem;hyphens:auto}
+  p.lead::first-letter{font-family:"Fraunces",serif;font-weight:800;font-size:4.6rem;float:left;line-height:0.85;padding:0.35rem 0.55rem 0 0;color:var(--accent);font-style:normal}
+  a{color:var(--accent);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+  a:hover{background:var(--accent);color:var(--paper);text-decoration:none}
+
+  /* pull quote */
+  blockquote.pull{font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:1.6rem;line-height:1.3;color:var(--accent);border:none;margin:2.5rem 0;padding:1.5rem 0 1.5rem 2rem;border-left:4px solid var(--accent);max-width:none}
+
+  /* chat reconstruction */
+  .chat{background:#cde0c7;border:1px solid var(--ink);padding:1.2rem 1rem;margin:2rem 0;border-radius:4px;background-image:linear-gradient(180deg,#d9e8d4,#cde0c7);}
+  .chat .day{font-family:"JetBrains Mono",monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.15em;text-align:center;color:var(--muted);margin:0.5rem 0 1rem}
+  .msg{max-width:85%;padding:0.55rem 0.8rem;border-radius:8px;margin:0.35rem 0;font-family:-apple-system,"Helvetica Neue",sans-serif;font-size:0.92rem;line-height:1.4;box-shadow:0 1px 1px rgba(0,0,0,0.06);position:relative}
+  .msg .who{font-size:0.7rem;font-weight:600;color:#1f7a4f;display:block;margin-bottom:0.1rem}
+  .msg .t{font-size:0.65rem;color:#777;float:right;margin-left:0.6rem;margin-top:0.2rem}
+  .msg.me{background:var(--chat-me);margin-left:auto}
+  .msg.them{background:var(--chat-other)}
+  .msg.them .who{color:#b4361a}
+
+  /* sidebar card */
+  .card{border:1px solid var(--ink);background:var(--paper-warm);padding:1.4rem 1.5rem;margin:2rem 0;position:relative}
+  .card::before{content:"";position:absolute;top:-1px;left:-1px;right:-1px;height:5px;background:var(--accent)}
+  .card h3{margin-top:0.3rem}
+  .card p{font-size:1rem}
+
+  .kicker{font-family:"JetBrains Mono",monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.18em;color:var(--accent);font-weight:600;display:block;margin-bottom:0.4rem}
+
+  ul.clean{list-style:none;padding:0;margin:1rem 0}
+  ul.clean li{padding:0.6rem 0 0.6rem 1.8rem;border-bottom:1px dotted var(--muted);position:relative;font-size:1rem;line-height:1.5}
+  ul.clean li::before{content:"▸";position:absolute;left:0.3rem;color:var(--accent);font-weight:700}
+
+  /* bibliography */
+  ol.biblio{padding-left:0;counter-reset:ref;list-style:none}
+  ol.biblio li{counter-increment:ref;padding:0.9rem 0 0.9rem 3rem;border-bottom:1px solid var(--paper-warm);position:relative;font-size:0.92rem;line-height:1.5;font-family:"Fraunces",serif}
+  ol.biblio li::before{content:counter(ref);position:absolute;left:0;top:0.9rem;font-family:"JetBrains Mono",monospace;font-size:0.75rem;color:var(--accent);font-weight:600;background:var(--paper-warm);width:2rem;height:2rem;display:grid;place-items:center;border-radius:50%}
+  ol.biblio .tag{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);background:var(--paper);padding:0.15rem 0.45rem;border:1px solid var(--muted);margin-left:0.4rem;border-radius:2px;vertical-align:middle}
+
+  .nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:2.5rem 0}
+  .nav a{display:block;padding:1rem;border:1px solid var(--ink);background:var(--paper-warm);text-decoration:none;color:var(--ink);font-family:"JetBrains Mono",monospace;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.08em;transition:all 0.15s}
+  .nav a:hover{background:var(--ink);color:var(--paper)}
+  .nav a .n{display:block;color:var(--accent);font-size:0.65rem;margin-bottom:0.3rem}
+
+  footer{margin-top:5rem;padding-top:2rem;border-top:6px double var(--ink);font-family:"JetBrains Mono",monospace;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);line-height:1.8}
+  footer strong{color:var(--ink)}
+
+  figure.photo{margin:2.5rem -1rem;padding:0;position:relative}
+  figure.photo .frame{background:var(--paper-warm);padding:0.9rem 0.9rem 0.3rem;border:1px solid var(--ink);box-shadow:6px 6px 0 rgba(26,20,16,0.12);transform:rotate(-0.6deg);transition:transform 0.3s ease}
+  figure.photo:hover .frame{transform:rotate(0deg)}
+  figure.photo img{display:block;width:100%;height:auto;filter:contrast(1.02) saturate(0.95)}
+  figure.photo figcaption{font-family:"Fraunces",serif;font-style:italic;font-size:0.92rem;line-height:1.45;color:var(--ink-soft);padding:0.8rem 0.3rem 0.4rem;text-align:center;border-top:1px dotted var(--muted);margin-top:0.6rem}
+  figure.photo figcaption .meta{display:block;font-family:"JetBrains Mono",monospace;font-style:normal;font-size:0.62rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);margin-top:0.4rem}
+  @media (max-width:640px){figure.photo{margin:2rem 0}}
+
+  .warning{background:#fff4e6;border:1px solid var(--accent);border-left:5px solid var(--accent);padding:1rem 1.2rem;margin:2rem 0;font-size:0.95rem}
+  .warning strong{color:var(--accent);text-transform:uppercase;font-family:"JetBrains Mono",monospace;font-size:0.72rem;letter-spacing:0.1em;display:block;margin-bottom:0.3rem}
+
+  @media (max-width:520px){
+    p.lead::first-letter{font-size:3.6rem}
+    blockquote.pull{font-size:1.25rem;padding-left:1.2rem}
+  }
+</style>
+</head>
+<body class="grain">
+<div class="wrap">
+
+<header class="mast">
+  <span class="vol">Segnale &amp; Rumore — Casi</span>
+  <span>№ 01 · Diego, 9 anni</span>
+  <span class="date">7–8 Aprile 2026</span>
+</header>
+
+<h1 class="title">Una notte in cui<br>l'acetone <em>ha vinto a metà</em></h1>
+<p class="deck">Cronaca di ventiquattro ore di ipoglicemia chetonemica gestita in famiglia — dai primi sorsi di acqua e zucchero alla sala d'attesa del Buzzi — accompagnata da due brevi saggi sulla fisiopatologia e da un protocollo pratico.</p>
+
+<div class="byline">
+  <span>A cura di Salvo Fedele</span>
+  <span>Lettura ≈ 12 min</span>
+</div>
+
+<nav class="nav">
+  <a href="#racconto"><span class="n">I</span>Il racconto</a>
+  <a href="#fisiopatologia"><span class="n">II</span>Perché succede</a>
+  <a href="#vomito"><span class="n">III</span>Perché il vomito</a>
+  <a href="#protocollo"><span class="n">IV</span>Il protocollo</a>
+  <a href="#bibliografia"><span class="n">V</span>Bibliografia</a>
+</nav>
+
+<h2 id="racconto"><span class="num">Capitolo I</span>Il racconto</h2>
+
+<p class="lead">La mattina del 7 aprile Diego, nove anni, è già in difficoltà. I genitori — Marco ed Elena — aggiornano via chat i nonni: pochi miglioramenti, qualche pezzetto di pasta e mezzo cracker che il bambino sembra tenere ma che, mezz'ora dopo, rimette. Nessuna febbre, nessun mal di gola. Solo quella nausea ostinata che accompagna la chetosi e che, come vedremo, è il prezzo che il cervello di un bambino paga per proteggersi dal digiuno.</p>
+
+<p>Per tutta la giornata la strategia è quella classica dell'ipoglicemia chetonemica gestita in casa: micro-sorsi di acqua e zucchero, un cucchiaino di miele, pazienza. Alle 17:08 Elena scrive: <em>«Ha vomitato di nuovo ora, dopo venti minuti dallo zucchero»</em>. Alle 17:10 Marco aggiunge che il cucchiaino di zucchero era concentrato — «quindi più zucchero» — e che forse qualcosa è stato assorbito prima dell'episodio.</p>
+
+<div class="chat">
+  <div class="day">Martedì 7 aprile · pomeriggio</div>
+  <div class="msg them"><span class="who">Marco</span>Ha vomitato di nuovo. Però si era preso un cucchiaino di zucchero con poca acqua, quindi più zucchero. Speriamo che un po' l'ha assimilato.<span class="t">17:11</span></div>
+  <div class="msg me"><span class="who">Salvo</span>Ok. Con pazienza riprovate tra una mezz'ora. Se siete disperati tentiamo tra mezz'ora con un farmaco.<span class="t">17:11</span></div>
+  <div class="msg them"><span class="who">Marco</span>Adesso dato un cucchiaino di miele circa 20 minuti fa 🤞<span class="t">17:38</span></div>
+</div>
+
+<p>È in questo momento che invio a Marco ed Elena i tre documenti divulgativi preparati in anticipo — fisiopatologia, meccanismo del vomito, protocollo — con l'idea che capire <em>perché</em> sta succedendo aiuti a non spaventarsi e a non cedere troppo presto alla tentazione del pronto soccorso. I sintomi di Diego sono tipici di un'ipoglicemia <em>non</em> grave: siamo quasi certamente sopra i 70&nbsp;mg/dL.</p>
+
+<blockquote class="pull">«Guardate questo protocollo: vedete se qualcuna di queste strategie può funzionare. I suoi sintomi sono tipici di ipoglicemia non grave.»</blockquote>
+
+<p>Verso le 20 la collaborazione del bambino è ai minimi: anche lo zucchero sotto la lingua lo tiene per poco, poi lo vuole sputare — <em>«come se fosse il dolore più grande del mondo»</em>, scrive Marco. Al terzo cucchiaino sublinguale, un po' sputato, si registra però una buona notizia: non vomita dalle 19:10. Poi, alle 20:58, la ricaduta.</p>
+
+<div class="chat">
+  <div class="day">Martedì 7 aprile · sera</div>
+  <div class="msg them"><span class="who">Marco</span>Diciamo che adesso è molto poco collaborativo. Anche lo zucchero sotto la lingua lo tiene poco poco e poi lo vuole sputare.<span class="t">20:19</span></div>
+  <div class="msg them"><span class="who">Marco</span>Comunque siamo al terzo cucchiaino di zucchero sotto la lingua. E non vomita dalle 19:10.<span class="t">20:20</span></div>
+  <div class="msg me"><span class="who">Salvo</span>È stanco, piccolo. Coraggio.<span class="t">20:21</span></div>
+  <div class="msg them"><span class="who">Marco</span>Ha rivomitato.<span class="t">20:58</span></div>
+</div>
+
+<p>La famiglia è in trasferta: bisogna rientrare a Milano. Diego si addormenta in auto, si risveglia per vomitare, si riaddormenta. A mezzanotte e dieci sono a casa, ma il micro-sorso offerto finisce anch'esso fuori. La decisione è presa: Marco porta Diego al pronto soccorso del <strong>Buzzi</strong>.</p>
+
+<div class="chat">
+  <div class="day">Mercoledì 8 aprile · notte</div>
+  <div class="msg them"><span class="who">Marco</span>Siamo in accettazione. Glicemia 120.<span class="t">01:22</span></div>
+  <div class="msg them"><span class="who">Marco</span>È strano che sia così alta?<span class="t">01:31</span></div>
+  <div class="msg me"><span class="who">Nonna</span>Non è strano, vuol dire che comunque ha assorbito lo zucchero.<span class="t">01:33</span></div>
+  <div class="msg me"><span class="who">Salvo</span>No, per niente. L'acetone però dovrà esserci ancora. Se è confermato sapremo cosa è successo.<span class="t">01:34</span></div>
+</div>
+
+<p>E così è: glicemia a 120, chetoni nelle urine. Il quadro è coerente, il bambino sta bene, ma per evitare che nelle ore successive si richieda una flebo, il medico del pronto soccorso propone <strong>ondansetron</strong> — quello stesso farmaco di cui avevo parlato nel file inviato ai genitori. Marco deve firmare per una terapia off-label: in Italia l'ondansetron nel vomito pediatrico da gastroenterite (e, per estensione, da chetosi) resta formalmente off-label, pur essendo ormai <em>on-evidence</em> in tutta la letteratura. È una stranezza regolatoria che non si riesce a superare.</p>
+
+<div class="card">
+  <span class="kicker">Promemoria clinico</span>
+  <h3>Perché la glicemia a 120 non è un'anomalia</h3>
+  <p>Diego, nelle ore precedenti, ha ricevuto piccole quantità di zuccheri semplici che, parzialmente, sono state assorbite. Il problema non era mai l'ipoglicemia franca (verosimilmente non si è mai scesi sotto 70), ma la <em>chetosi autoalimentante</em>: i chetoni provocano nausea, la nausea impedisce l'assunzione di carboidrati, il digiuno perpetua la chetogenesi. Interrompere quel circolo era l'unico obiettivo reale.</p>
+</div>
+
+<p>Alle 01:55 l'ondansetron è stato somministrato. Il medico consiglia di aspettare circa un'ora prima di riprovare con i liquidi: suggerisco di non avere fretta, perché con una glicemia di 120 siamo in una fascia tranquilla per almeno una o due ore, e se Diego vomitasse il farmaco la gestione diventerebbe molto più complessa. Padre e figlio si accomodano in sala d'attesa — c'è una foto: Marco semi-sdraiato sulla sedia, Diego raggomitolato accanto a lui, soli e comodissimi nella loro stanchezza condivisa.</p>
+
+<p>Alle 03:37 Marco scrive: stanno bevendo a piccoli sorsi una soluzione zuccherina fornita dal reparto, un cucchiaio ogni cinque minuti, sono a tre cucchiaini. Alle 05:18 la notizia che aspettavamo: <strong>usciti</strong>. Un bicchiere bevuto, un altro iniziato, dimissione a metà del secondo.</p>
+
+<figure class="photo">
+  <div class="frame">
+    <img src="assets/ps-buzzi-diego-marco.jpeg" alt="Marco e Diego nella sala d'attesa del pronto soccorso del Buzzi, nel cuore della notte: Marco seduto con il telefono sollevato per scattare il selfie, Diego raggomitolato accanto a lui sulla sedia, addormentato sotto una felpa rossa.">
+    <figcaption>
+      «Siamo così. Soli e comodissimi.»
+      <span class="meta">Buzzi · 8 aprile 2026 · 02:33</span>
+    </figcaption>
+  </div>
+</figure>
+
+<blockquote class="pull">«Usciti! Bevuto un bicchiere. Ce ne hanno dato un altro, ma per fortuna ci hanno dimesso a metà secondo bicchiere.»</blockquote>
+
+<p>La mattina dell'8 aprile si procede piano: reidratante, crackers, pane. Il bambino è <em>«un po' spaventatino»</em>, scrive Elena, e vuole fare tutto molto lento. A mezzogiorno e mezzo la risposta alla domanda di Marco — «come va?» — è laconica e sufficiente: <em>«bene 🙂»</em>.</p>
+
+<h2 id="fisiopatologia"><span class="num">Capitolo II</span>Perché succede: fisiopatologia dell'ipoglicemia chetonemica</h2>
+
+<p>Quello che segue è un estratto dei due documenti divulgativi preparati per Marco ed Elena, scritti per un target di genitori con formazione scientifica. La versione integrale — con citazioni puntuali — è disponibile in <a href="docs/fisiopatologia.md">docs/fisiopatologia.md</a>.</p>
+
+<h3>Il mismatch tra domanda e produzione di glucosio</h3>
+<p>I bambini piccoli hanno un cervello proporzionalmente molto più grande di quello adulto: a tre anni il cervello rappresenta circa il 15% del peso corporeo, contro il 2% dell'adulto. Il consumo cerebrale di glucosio per kg di peso è quindi enormemente più elevato. Ecco perché un bambino sviluppa ipoglicemia e chetosi in tempi che un adulto non sperimenterebbe mai.</p>
+
+<p>Studi con isotopi stabili hanno mostrato che, durante il digiuno prolungato, nei bambini con ipoglicemia chetonemica la produzione epatica di glucosio diminuisce del 31,9%, contro il 17,9% dei controlli. La glicogenolisi crolla (le riserve epatiche si esauriscono in 8–12 ore), ma soprattutto la gluconeogenesi compensa in modo insufficiente: aumenta solo del 6,8% contro il 19,5%. È questo il difetto centrale — se di difetto si può parlare: per molti bambini si tratta semplicemente della coda inferiore della distribuzione gaussiana della tolleranza al digiuno.</p>
+
+<h3>La chetogenesi è una risposta <em>appropriata</em></h3>
+<p>I corpi chetonici non sono il nemico: sono la risposta salvavita. Il fegato li produce per fornire al cervello un combustibile alternativo quando il glucosio scarseggia, risparmiandolo. Livelli di β-idrossibutirrato superiori a 1&nbsp;mM abbassano addirittura la soglia glicemica per i sintomi neuroglicopenici da 2,8 a 2,4&nbsp;mmol/L. È una protezione parziale, ma reale.</p>
+
+<div class="card">
+  <span class="kicker">In breve</span>
+  <h3>Una condizione benigna, autolimitante</h3>
+  <p>La maggior parte dei bambini supera completamente il problema entro i 7–9 anni di età, quando il rapporto cervello/massa corporea si normalizza e le riserve di glicogeno e la massa muscolare aumentano sufficientemente. Diego, a nove anni, è ancora nella coda del fenomeno.</p>
+</div>
+
+<h2 id="vomito"><span class="num">Capitolo III</span>Perché il vomito: il prezzo da pagare</h2>
+
+<p>Il secondo documento — integrale in <a href="docs/vomito-chetosi.md">docs/vomito-chetosi.md</a> — risponde a una domanda che ogni genitore di un bambino in chetosi si pone prima o poi: <em>perché proprio adesso che avrebbe bisogno di mangiare, non riesce?</em></p>
+
+<h3>L'area postrema: la sentinella chimica</h3>
+<p>Il vomito è coordinato dal <em>centro del vomito</em> nel tronco encefalico, che riceve afferenze da corteccia, sistema vestibolare, tratto gastrointestinale e — qui è il punto — dalla <strong>chemoreceptor trigger zone</strong> (CTZ) nell'area postrema. L'area postrema è uno degli organi circumventricolari: <em>manca della barriera emato-encefalica</em>. I suoi neuroni assaggiano direttamente il sangue che li perfonde. Evolutivamente è un sistema anti-avvelenamento: qualsiasi alterazione chimica inusuale attiva il vomito per eliminare la possibile tossina.</p>
+
+<p>I corpi chetonici sono acidi organici deboli. Quando le loro concentrazioni plasmatiche superano i 2,5–3&nbsp;mmol/L, l'acidosi sistemica attiva direttamente i neuroni dell'area postrema, irrita la mucosa gastrica, rallenta lo svuotamento gastrico. Il risultato è un <strong>circolo vizioso</strong>: chetoni → vomito → impossibilità di assumere carboidrati → digiuno → più chetoni.</p>
+
+<blockquote class="pull">I corpi chetonici sono simultaneamente <em>salvatori</em> — perché nutrono il cervello — e <em>attivatori del vomito</em>, perché l'area postrema non può distinguerli da una tossina.</blockquote>
+
+<p>Ecco perché l'intervento precoce, prima che il vomito si instauri, è molto più efficace del trattamento tardivo. Ed ecco perché, quando il circolo si è già chiuso, un antiemetico (l'ondansetron, tipicamente) è l'unico modo per spezzarlo senza ricorrere alla flebo.</p>
+
+<h2 id="protocollo"><span class="num">Capitolo IV</span>Il protocollo di somministrazione orale</h2>
+
+<p>Riassunto pratico del protocollo che ho inviato a Marco ed Elena alle 17:42 del 7 aprile. Versione integrale con criteri decisionali e note in <a href="docs/protocollo.md">docs/protocollo.md</a>.</p>
+
+<div class="card">
+  <span class="kicker">Condizioni per l'uso orale</span>
+  <h3>Quando si può gestire a casa</h3>
+  <ul class="clean">
+    <li>Bambino vigile, in grado di deglutire</li>
+    <li>Assenza di vomito incoercibile</li>
+    <li>Glicemia ≥ 40 mg/dL (se misurabile)</li>
+    <li>Sotto i 40 mg/dL o con alterazione dello stato di coscienza: accesso venoso obbligatorio</li>
+  </ul>
+</div>
+
+<h3>Dose iniziale</h3>
+<p><strong>0,3&nbsp;g/kg di glucosio puro</strong> — per un bambino di 25–30&nbsp;kg significa 7,5–9&nbsp;grammi. In pratica: una compressa e mezzo/due di glucosio, oppure 15–18&nbsp;g di zucchero da tavola in 100&nbsp;ml d'acqua, oppure 150–200&nbsp;ml di succo di frutta, oppure due cucchiai di miele. Nei bambini poco collaboranti ma vigili, un cucchiaino di zucchero in slurry applicato sotto la lingua bypassa il tratto gastrointestinale irritato.</p>
+
+<h3>Monitoraggio</h3>
+<p>Controllare la glicemia dopo 15 minuti. Se sotto 70, ripetere. Se sopra, alimentazione di mantenimento con carboidrati complessi + proteine (pane o crackers, frutta, yogurt). Obiettivo: 5–10&nbsp;g di glucosio ogni 2–3 ore nei periodi di malessere intercorrente, evitando digiuni notturni superiori alle 8–10 ore.</p>
+
+<div class="warning">
+  <strong>Nota su ondansetron</strong>
+  In Italia l'ondansetron nel vomito pediatrico non oncologico/non postoperatorio è <em>off-label</em> ma ampiamente supportato dalla letteratura (off-label on-evidence). Non si trova in farmacia al banco: viene somministrato nei pronto soccorso pediatrici che ne hanno implementato l'uso, come il Buzzi. Il domperidone — tradizionalmente usato in Italia — si è dimostrato non superiore al placebo nello studio italiano multicentrico di Marchetti et al. (2016).
+</div>
+
+<h2 id="bibliografia"><span class="num">Capitolo V</span>Bibliografia</h2>
+
+<p>Le referenze che seguono sono quelle utilizzate nei tre documenti divulgativi allegati al repository. Sono raggruppate per tema.</p>
+
+<h3>Ipoglicemia chetonemica — fisiopatologia</h3>
+<ol class="biblio">
+  <li>Wolfsdorf JI, Derks TGJ, Drachmann D, et al. <strong>Idiopathic Pathological Ketotic Hypoglycemia: Finding the Needle in a Haystack</strong>. <em>Hormone Research in Paediatrics</em>. 2025;98(3):246-257. <a href="https://pubmed.ncbi.nlm.nih.gov/38513624">PMID 38513624</a> <span class="tag">Review</span></li>
+  <li>Pagliara AS, Kari IE, De Vivo DC, Feigin RD, Kipnis DM. <strong>Hypoalaninemia: A Concomitant of Ketotic Hypoglycemia</strong>. <em>J Clin Invest</em>. 1972;51(6):1440-9. <a href="https://pubmed.ncbi.nlm.nih.gov/5024041">PMID 5024041</a> <span class="tag">Classico</span></li>
+  <li>Huidekoper HH, Duran M, Turkenburg M, et al. <strong>Fasting Adaptation in Idiopathic Ketotic Hypoglycemia: A Mismatch Between Glucose Production and Demand</strong>. <em>Eur J Pediatr</em>. 2008;167(8):859-65. <a href="https://pubmed.ncbi.nlm.nih.gov/17934759">PMID 17934759</a></li>
+  <li>Bodamer OA, Hussein K, Morris AA, et al. <strong>Glucose and Leucine Kinetics in Idiopathic Ketotic Hypoglycaemia</strong>. <em>Arch Dis Child</em>. 2006;91(6):483-6. <a href="https://pubmed.ncbi.nlm.nih.gov/16443613">PMID 16443613</a></li>
+  <li>Wolfsdorf JI, Sadeghi-Nejad A, Senior B. <strong>Hypoalaninemia and Ketotic Hypoglycemia: Cause or Consequence?</strong> <em>Eur J Pediatr</em>. 1982;138(1):28-31. <a href="https://pubmed.ncbi.nlm.nih.gov/7075623">PMID 7075623</a></li>
+  <li>Veneman T, Mitrakou A, Mokan M, Cryer P, Gerich J. <strong>Effect of Hyperketonemia and Hyperlacticacidemia on Symptoms, Cognitive Dysfunction, and Counterregulatory Hormone Responses During Hypoglycemia in Normal Humans</strong>. <em>Diabetes</em>. 1994;43(11):1311-7. <a href="https://pubmed.ncbi.nlm.nih.gov/7926305">PMID 7926305</a></li>
+  <li>Alhaidan Y, Larsen MJ, Schou AJ, et al. <strong>Exome Sequencing Revealed DNA Variants in NCOR1, IGF2BP1, SGLT2 and NEK11 as Potential Novel Causes of Ketotic Hypoglycemia in Children</strong>. <em>Sci Rep</em>. 2020;10(1):2114. <a href="https://pubmed.ncbi.nlm.nih.gov/32034166">PMID 32034166</a></li>
+  <li>Brown LM, Corrado MM, van der Ende RM, et al. <strong>Evaluation of Glycogen Storage Disease as a Cause of Ketotic Hypoglycemia in Children</strong>. <em>J Inherit Metab Dis</em>. 2015;38(3):489-93. <a href="https://pubmed.ncbi.nlm.nih.gov/25070466">PMID 25070466</a></li>
+</ol>
+
+<h3>Chetosi e vomito — neurobiologia</h3>
+<ol class="biblio" start="9">
+  <li>Millar R, Harding A. <strong>Accelerated Starvation of Childhood: Have I Judged Ketones?</strong> <em>Emerg Med Australas</em>. 2019;31(3):314-320. <a href="https://pubmed.ncbi.nlm.nih.gov/30916481">PMID 30916481</a> <span class="tag">Review</span></li>
+  <li>Miller AD, Leslie RA. <strong>The Area Postrema and Vomiting</strong>. <em>Front Neuroendocrinol</em>. 1994;15(4):301-20. <a href="https://pubmed.ncbi.nlm.nih.gov/7895890">PMID 7895890</a></li>
+  <li>Grunberg SM, Hesketh PJ. <strong>Control of Chemotherapy-Induced Emesis</strong>. <em>N Engl J Med</em>. 1993;329(24):1790-6. <a href="https://www.nejm.org/doi/full/10.1056/NEJM199312093292408">NEJM</a></li>
+  <li>Carpenter DO, Briggs DB, Knox AP, Strominger N. <strong>Excitation of Area Postrema Neurons by Transmitters, Peptides, and Cyclic Nucleotides</strong>. <em>J Neurophysiol</em>. 1988;59(2):358-69. <a href="https://pubmed.ncbi.nlm.nih.gov/2895167">PMID 2895167</a></li>
+  <li>Hesketh PJ. <strong>Chemotherapy-Induced Nausea and Vomiting</strong>. <em>N Engl J Med</em>. 2008;358(23):2482-94. <a href="https://www.nejm.org/doi/full/10.1056/NEJMra0706547">NEJM</a></li>
+</ol>
+
+<h3>Gestione clinica e ondansetron</h3>
+<ol class="biblio" start="14">
+  <li>Zucchini S, Tumini S, Scaramuzza AE, et al. <strong>Recommendations for Recognizing, Risk Stratifying, Treating, and Managing Children and Adolescents With Hypoglycemia</strong> [ISPED]. <em>Front Endocrinol</em>. 2024;15:1387537. <a href="https://pubmed.ncbi.nlm.nih.gov/38894740">PMID 38894740</a> <span class="tag">Linee guida</span></li>
+  <li>Ghosh A, Banerjee I, Morris AAM. <strong>Recognition, Assessment and Management of Hypoglycaemia in Childhood</strong>. <em>Arch Dis Child</em>. 2016;101(6):575-580. <a href="https://pubmed.ncbi.nlm.nih.gov/26718813">PMID 26718813</a></li>
+  <li>Hewett Brumberg EK, Douma MJ, Alibertis K, et al. <strong>2024 American Heart Association and American Red Cross Guidelines for First Aid</strong>. <em>Circulation</em>. 2024;150(24):e519-e579. <a href="https://www.ahajournals.org/doi/abs/10.1161/CIR.0000000000001281">AHA</a> <span class="tag">Linee guida</span></li>
+  <li>Romano C, Dipasquale V, Scarpignato C. <strong>Antiemetic Drug Use in Children: What the Clinician Needs to Know</strong>. <em>J Pediatr Gastroenterol Nutr</em>. 2019;68(4):466-471. <a href="https://pubmed.ncbi.nlm.nih.gov/30540713">PMID 30540713</a></li>
+  <li>Niño-Serna LF, Acosta-Reyes J, Veroniki AA, Florez ID. <strong>Antiemetics in Children With Acute Gastroenteritis: A Meta-Analysis</strong>. <em>Pediatrics</em>. 2020;145(4):e20193260. <a href="https://pubmed.ncbi.nlm.nih.gov/32132152">PMID 32132152</a> <span class="tag">Meta-analisi</span></li>
+  <li>Fugetto F, Filice E, Biagi C, et al. <strong>Single-Dose of Ondansetron for Vomiting in Children and Adolescents With Acute Gastroenteritis — an Updated Systematic Review and Meta-Analysis</strong>. <em>Eur J Pediatr</em>. 2020;179(7):1007-1016. <a href="https://pubmed.ncbi.nlm.nih.gov/32382791">PMID 32382791</a> <span class="tag">Revisione</span></li>
+  <li>Marchetti F, Bonati M, Maestro A, et al. <strong>Oral Ondansetron Versus Domperidone for Acute Gastroenteritis in Pediatric Emergency Departments: Multicenter Double Blind Randomized Controlled Trial</strong>. <em>PLoS One</em>. 2016;11(11):e0165441. <a href="https://pubmed.ncbi.nlm.nih.gov/27880811">PMID 27880811</a> <span class="tag">RCT italiano</span></li>
+  <li>Freedman SB, Williamson-Urquhart S, Plint AC, et al. <strong>Multidose Ondansetron after Emergency Visits in Children with Gastroenteritis</strong>. <em>N Engl J Med</em>. 2025;393(3):255-266. <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2503596">NEJM</a></li>
+</ol>
+
+<footer>
+  <p><strong>Segnale &amp; Rumore — Casi</strong><br>
+  Serie editoriale di casi clinici pediatrici commentati.<br>
+  A cura di Salvo Fedele · salvofedele.github.io</p>
+  <p>I documenti qui raccolti hanno finalità <strong>divulgative</strong> ed <strong>educative</strong>. Non sostituiscono la valutazione di un medico. In caso di dubbio su un episodio di ipoglicemia o vomito pediatrico, contattare sempre il pediatra di riferimento o recarsi al pronto soccorso più vicino.</p>
+  <p>Pubblicato l'8 aprile 2026 · Licenza CC BY-NC-SA 4.0</p>
+</footer>
+
+</div>
+</body>
+</html>

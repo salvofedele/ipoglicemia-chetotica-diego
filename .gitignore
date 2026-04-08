@@ -1,0 +1,63 @@
+# ──────────────────────────────────────────────────────────
+# Segnale & Rumore — Casi · .gitignore
+# ──────────────────────────────────────────────────────────
+
+# Materiali bibliografici originali ad accesso riservato
+# (cartella locale tenuta fuori dal repo pubblico)
+/private/
+/biblio-originali/
+/riservato/
+
+# Tutti i PDF — evita di appesantire trasmissione e cloni
+# (se un PDF specifico deve essere pubblicato, forzarlo con
+#  git add -f percorso/del/file.pdf)
+*.pdf
+
+# File di sistema macOS / Windows / Linux
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Editor e IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# Backup e file temporanei
+*.bak
+*.tmp
+*.old
+*.orig
+*.rej
+~$*
+
+# Node / tooling eventuali (se in futuro si aggiunge un build)
+node_modules/
+dist/
+.cache/
+.parcel-cache/
+
+# Logs
+*.log
+npm-debug.log*
+
+# File di grandi dimensioni non destinati al repo pubblico
+*.zip
+*.tar.gz
+*.7z
+*.dmg
+*.iso
+
+# Immagini pesanti non processate (sorgenti originali prima del resize)
+/assets/_raw/
+*.psd
+*.xcf
